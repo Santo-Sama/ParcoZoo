@@ -2,6 +2,7 @@ import java.util.*;
 
 public class ParcoZoo {
     private final Scanner in = new Scanner(System.in).useDelimiter("\n");
+    Utility utility = new Utility();
 
 
     private ArrayList<Animal> listaAnimal;
@@ -212,7 +213,7 @@ public class ParcoZoo {
             numSpecie ++;
         }
         //verifichiamo input
-        int sceltaSpecie = Utility.sceltaInt();
+        int sceltaSpecie = utility.sceltaInt();
         while (sceltaSpecie < 0 && sceltaSpecie > tempListaSpecie.size() + 1) {
             System.out.println("Scelta non valida riprova");
             sceltaSpecie = in.nextInt();
